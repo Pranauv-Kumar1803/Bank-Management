@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles2.css" rel="stylesheet" type="text/css">
+    <title>User Page</title>
+</head>
+
+<body>
+    <section id="home">
+        <div class="navbar">
+            <div class="container1 flex">
+                <h1 class="logo">The Bank</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/api/emp/list">List of Accounts</a> </li>
+                        <li> <a id="view" href="/emp/search">Search for Account</a> </li>
+                        <li> <a id="view" href="/api/emp/logout">Logout</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <div class="details">
+                <span id="span1" class="empid">ID : <%= employee.empId %></span>
+                <span id="span1" class="empname">Name : <%= employee.empName %></span>
+                <span id="span2" class="emppwd">Password : <%= employee.empPwd %></span>
+            </div>
+        </div>
+    </section>
+    
+</body>
+
+</html>

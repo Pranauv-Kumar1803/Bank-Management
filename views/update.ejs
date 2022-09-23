@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="../public/styles.css"> -->
+    <link href="/styles3.css" rel="stylesheet" type="text/css">
+    <link href="/styles2.css" rel="stylesheet" type="text/css">
+    <title>Change Profile</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container1 flex">
+            <h1 class="logo">The Bank</h1>
+            <nav>
+                <ul>
+                    <li> <a id="home" href="/api/user">Home</a> </li>
+                    <li><a href="/api/transaction">Make Transactions</a> </li>
+                    <li> <a id="view" href="/api/view">View Transactions</a> </li>
+                    <li> <a id="download" href="/api/user/download">Download Transactions</a> </li>
+                    <li><a id="close" href="/api/close">Close Account</a></li>
+                    <li><a id="logout" href="/api/user/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container3">
+        <form action="/api/user/change" method="post">
+            <h1>Change your Profile</h1>
+            <select name="option" >
+                <option value="address">address</option>
+                <option value="email">email</option>
+                <option value="name">name</option>
+                <option value="password">password</option>
+            </select>
+
+            <input type="text" name="data" placeholder="enter the new data">
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+</body>
+</html>

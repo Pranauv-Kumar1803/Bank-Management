@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles3.css" rel="stylesheet" type="text/css">
+    <link href="/styles2.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="home">
+        <div class="navbar">
+            <div class="container1 flex">
+                <h1 class="logo">The Bank</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/api/employee">Home</a> </li>
+                        <li><a href="/api/emp/list">List of Accounts</a> </li>
+                        <li> <a id="view" href="/emp/search">Search for Account</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container4">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% views.forEach((view)=>{ %>
+                        <tr>
+                            <td><%= view.userDetails[0].name %></td>
+                            <td><%= view.userDetails[0].email %></td>
+                            <td><%= view.userDetails[0].age %></td>
+                            <td><%= view.userDetails[0].address %></td>
+                            <td><%= view.userDetails[0].phone %></td>
+                            <td><%= view.userDetails[0].balance %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>
